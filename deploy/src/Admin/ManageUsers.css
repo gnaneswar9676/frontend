@@ -1,0 +1,136 @@
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("vt.jpeg");
+  color: #333;
+}
+
+/* User Management Container */
+.user-management-container {
+  margin: 7% auto;
+  padding: 30px;
+  max-width: 1200px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling */
+.user-management-header {
+  color: #444;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+.user-management-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form-input,
+.form-select {
+  padding: 12px 15px;
+  width: 250px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+}
+
+/* New Button Style - Add User Button (Web 3.0 inspired) */
+.form-submit-button {
+  padding: 15px 30px;
+  background-color: #ff6347; /* Vibrant Tomato */
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.form-submit-button:hover {
+  background-color: #ff4500; /* Darker Tomato on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.form-submit-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Table Styling */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.user-table-header {
+  background-color: #6a11cb;
+  color: #fff;
+  padding: 15px;
+}
+
+.user-table-cell {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.user-table-row:hover {
+  background-color: #f1f1f1;
+}
+
+/* New Button Style - Delete Button */
+.delete-button {
+  padding: 8px 15px;
+  background-color: #dc3545;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #c9302c; /* Darker Red on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+}
+
+.delete-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+/* Icon Integration */
+.form-submit-button::before,
+.delete-button::before {
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+}
+
+.form-submit-button::before {
+  content: '\f00c'; /* Font Awesome check icon */
+}
+
+.delete-button::before {
+  content: '\f1f8'; /* Font Awesome trash icon */
+}

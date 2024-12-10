@@ -1,0 +1,252 @@
+body {
+  background-image: url('./vt.jpeg'); /* Your background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 1200px; /* Limit the maximum width for better responsiveness */
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 400px; /* Adjust as needed */
+  border-radius: 8px;
+  overflow: hidden;
+  backface-visibility: hidden;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.swiper-slide:hover {
+  transform: scale(2); /* Enlarge slightly on hover */
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center; /* Center pagination */
+  position: absolute;
+  bottom: 10px; /* Adjust as needed */
+  margin-left: 15%;
+  left: 100;
+  right: 0;
+  z-index: 10; /* Ensure it stays above other elements */
+}
+
+.swiper-pagination-bullet {
+  background: #d55757; /* Optional: style for bullets */
+}
+
+.swiper-pagination-bullet-active {
+  background: #a10c0c; /* Active bullet color */
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+.slide1 {
+  background-image: url('./images/6.jpg');
+}
+
+.slide2 {
+  background-image: url('./images/1.jpg');
+}
+
+.slide3 {
+  background-image: url('./images/2.avif');
+}
+
+.slide4 {
+  background-image: url('./images/3.avif');
+}
+
+.slide5 {
+  background-image: url('./images/4.jpg');
+}
+
+.slide6 {
+  background-image: url('./images/5.jpeg');
+}
+
+.virtual-tour-title {
+
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 3rem;
+ 
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px #ff4500;
+ 
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 10px #f44336, 0 0 20px #ff9800;
+  }
+  100% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 0 0 20px #f44336, 0 0 30px #ff9800;
+  }
+}
+
+
+.full-screen-container {
+  display: flex;
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center */
+  width: 80%; /* Set the width to a percentage */
+  max-width: 900px; /* Optional: Set a max width for larger screens */
+  height: 70%; /* Adjust height based on content */
+  background-color: rgb(253, 248, 248);
+  z-index: 999;
+  border-radius: 40px; /* Optional: Add rounded corners */
+  padding: 20px; /* Add padding around the content */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow effect */
+}
+
+.full-screen-left {
+  flex: 1; /* Allow this to take available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Optional padding */
+}
+
+.full-screen-right {
+  flex: 1; /* Allow this to take available space */
+  padding: 20px; /* Add padding */
+  color: rgb(10, 10, 10);
+}
+
+/* Adjust h2 and p font sizes if needed for better fit */
+.full-screen-right h2 {
+  margin-bottom: 20px;
+  font-size: 2rem; /* Adjusted size */
+}
+
+.full-screen-right p {
+  font-size: 1rem; /* Adjusted size */
+  margin-bottom: 10px;
+  color: rgb(10, 10, 10);
+}
+
+
+.close-button {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: rgb(15, 15, 15);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .full-screen-container {
+    flex-direction: column;
+  }
+
+  .full-screen-left,
+  .full-screen-right {
+    width: 100%;
+    height: 50%;
+  }
+}
+.animated-button {
+  display: inline-block;
+  padding: 15px 30px; /* Vertical and horizontal padding */
+  margin-top: 20px; /* Space above the button */
+  background-color: #ff6347; /* Vibrant color (Tomato) */
+  color: #fff; /* White text color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  border-radius: 50px; /* Makes the button oval */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.animated-button:hover {
+  background-color: #ff4500; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.animated-button:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+
+.animated {
+  display: inline-block;
+  padding: 15px 30px; /* Vertical and horizontal padding */
+  margin-left: 13px; /* Space above the button */
+  background-color: #ff6347; /* Vibrant color (Tomato) */
+  color: #fff; /* White text color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  border-radius: 50px; /* Makes the button oval */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.animated:hover {
+  background-color: #ff4500; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.animated:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}
+
+
+
+
+
+
+
+
+.animated1 {
+  display: inline-block;
+  padding: 15px 30px; /* Vertical and horizontal padding */
+  margin-left: 650px; /* Space above the button */
+  background-color: #ff6347; /* Vibrant color (Tomato) */
+  color: #fff; /* White text color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  border-radius: 50px; /* Makes the button oval */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.animated1:hover {
+  background-color: #ff4500; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.animated1:active {
+  transform: scale(0.95); /* Slightly shrink on click */
+}

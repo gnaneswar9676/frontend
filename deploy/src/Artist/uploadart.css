@@ -1,0 +1,126 @@
+/* General Styles */
+.uploadart-body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Upload Art Container */
+  .upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .upload-box {
+    background: rgba(255, 255, 255, 0.9); /* Slightly opaque background */
+    border-radius: 50px; /* Oval shape */
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    max-width: 500px;
+    width: 100%;
+  
+    /* Animation */
+    animation: floatIn 1s ease-out;
+  }
+  
+  /* Float Animation */
+  @keyframes floatIn {
+    from {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Heading */
+  .upload-heading {
+    text-align: center;
+    color: #000;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Input Group */
+  .upload-input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .upload-input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  
+  .upload-input-group input,
+  .upload-input-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .upload-input-group textarea {
+    resize: vertical;
+  }
+  
+  ::placeholder {
+    color: #cccccc;
+  }
+  
+  /* Button */
+  .upload-button {
+    width: auto;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: #ff7e5f;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  .upload-button:hover {
+    background: #feb47b;
+  }
+  
+  /* Link */
+  .upload-link {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .upload-link p {
+    color: #000;
+  }
+  
+  .upload-link a {
+    color: #ff7e5f;
+    text-decoration: none;
+  }
+  
+  .upload-link a:hover {
+    text-decoration: underline;
+  }
+  

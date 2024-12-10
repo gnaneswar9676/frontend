@@ -1,0 +1,169 @@
+/* src/css/Home.css */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .home-page {
+    position: relative; /* Create a positioning context for the pseudo-element */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow for better appearance */
+  }
+  
+  .home-page::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute; /* Position it relative to the .home-page */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('./vt.jpeg'); /* Background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    filter: blur(0px); /* Apply blur effect */
+    z-index: 0; /* Send it to the back */
+  }
+  
+  .home-page > * {
+    position: relative; /* Ensure child elements appear above the pseudo-element */
+    z-index: 1; /* Bring content above the blurred background */
+  }
+  
+  
+  
+  .human-figure {
+    width: 150px; /* Adjust size as needed */
+    animation: move 3s infinite; /* Add the bobbing effect */
+    margin-bottom: 20px; /* Space below the image */
+  }
+  
+  @keyframes move {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+  }
+  
+  .gallery-title {
+    font-size: 3rem; /* Increased font size */
+    color: #f06868; /* White text for contrast */
+    font-weight: bold; /* Bold text */
+    margin: 10px 0;
+    text-align: center;
+    animation: fadeInUp 1.5s ease-out; /* Faster animation */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Shadow for depth */
+  }
+  
+  .gallery-description {
+    font-size: 1.5rem; /* Increased font size */
+    color: #fff; /* White text for contrast */
+    font-weight: 400; /* Normal weight */
+    text-align: center;
+    max-width: 600px; /* Limit the width of the description */
+    line-height: 1.5; /* Spacing between lines */
+    animation: fadeInUp 1.5s ease-out 0.3s; /* Animation with a delay */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  }
+  
+  /* Button Styles */
+  .animated-button {
+    display: inline-block;
+    padding: 15px 30px; /* Vertical and horizontal padding */
+    margin-top: 20px; /* Space above the button */
+    background-color: #ff6347; /* Vibrant color (Tomato) */
+    color: #fff; /* White text color */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    border-radius: 50px; /* Makes the button oval */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+  }
+  
+  .animated-button:hover {
+    background-color: #ff4500; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  }
+  
+  .animated-button:active {
+    transform: scale(0.95); /* Slightly shrink on click */
+  }
+  
+  /* Human cartoon animation */
+  .human-cartoon {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 100px;
+    background-color: #ffcc00; /* Cartoon color */
+    border-radius: 10px;
+    animation: moveToCenter 5s ease-in-out forwards;
+  }
+  
+  @keyframes moveToCenter {
+    0% {
+        bottom: 0;
+        left: 0;
+    }
+    50% {
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(360deg); /* Add rotation for effect */
+    }
+    100% {
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* Keep at center */
+    }
+  }
+  
+  /* 3D Card Effect for Art Pieces */
+  .card {
+    background: rgb(130, 128, 128); /* Semi-transparent white for cards */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for effects */
+    width: 300px; /* Set card width */
+    height: 400px; /* Set card height */
+    margin: 20px; /* Space around cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px; /* Perspective for 3D effect */
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) rotateY(10deg); /* Lift and slight rotation on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  }
+  
+  .card img {
+    max-width: 100%; /* Responsive image */
+    border-radius: 12px 12px 0 0; /* Round top corners */
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Title font size */
+    color: #333; /* Dark text */
+    margin: 10px 0; /* Margin for spacing */
+  }
+  
+  .card-description {
+    font-size: 1rem; /* Description font size */
+    color: #666; /* Softer color */
+    padding: 0 10px; /* Padding for description */
+  }
+  

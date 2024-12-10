@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+body {
+  background-image: url('./vt.jpeg'); /* Your background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+.containers {
+  display: flex;
+  position: fixed;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust to truly center */
+  width: 80%; /* Set the width to a percentage */
+  max-width: 900px; /* Optional: Set a max width for larger screens */
+  height: 70%; /* Adjust height based on content */
+  background-color: rgb(253, 248, 248);
+  z-index: 999;
+  border-radius: 40px; /* Optional: Add rounded corners */
+  padding: 20px; /* Add padding around the content */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow effect */
+
+  animation: floatIn 1s ease-out; /* Apply animation */
+}
+
+
+/* Float Animation */
+@keyframes floatIn {
+  from {
+    transform: translateY(100%); /* Start from below the viewport */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    transform: translateY(0); /* End at its original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+
+.containers form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.containers form .row .col {
+    flex: 1 1 250px;
+}
+
+.col .title {
+    font-size: 20px;
+    color: rgb(237, 55, 23);
+    padding-bottom: 5px;
+}
+
+.col .inputBox {
+    margin: 15px 0;
+    border-radius: 50px;
+    
+}
+
+.col .inputBox label {
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 50px;
+}
+
+.col .inputBox input,
+.col .inputBox select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
+.col .inputBox input:focus,
+.col .inputBox select:focus {
+    border: 1px solid #000;
+}
+
+.col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.col .flex .inputBox {
+    flex: 1 1;
+    margin-top: 5px;
+}
+
+.col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.containers form .submit_btn {
+  display: inline-block;
+  padding: 15px 30px; /* Vertical and horizontal padding */
+  margin-bottom: 10px; /* Space above the button */
+  background-color: #ff6347; /* Vibrant color (Tomato) */
+  color: #fff; /* White text color */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  border-radius: 50px; /* Makes the button oval */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    /* Centering */
+    display: block; /* Make it a block element for centering */
+    margin: 1rem auto;
+}
+
+.containers form .submit_btn:hover {
+  background-color: #ff4500; /* Darker shade on hover */
+  transform: scale(1.05);
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
